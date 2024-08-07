@@ -22,4 +22,5 @@ section {
 .button_hidden {
     border: none;
     background-color: transparent;
+    height: auto;
 }

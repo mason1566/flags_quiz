@@ -1,5 +1,6 @@
 let countries;
 let quiz;
+
 fetchCountries().then((json) => {
     countries = json;
     quiz = new Quiz();
