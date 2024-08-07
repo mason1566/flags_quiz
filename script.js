@@ -23,9 +23,13 @@ function shuffleArray(array) {
 class Quiz {
     currentCountryIndex;
     countryCodes;
+    originalCount;
 
     constructor() {
         this.countryCodes = Object.keys(countries);
+        this.originalCount = this.countryCodes.length;
+        this.setCount();
+        this.setTotal();
         shuffleArray(this.countryCodes);
 
         // EVENT HANDLERS
@@ -82,9 +86,19 @@ class Quiz {
             if (this.currentCountryIndex >= this.countryCodes.length) {
                 this.currentCountryIndex = 0;
             }
-            console.log(this.countryCodes.length);
+            guessBox.value = '';
+            this.setCount();
             this.displayFlag();
         }
+    }
+
+    setCount() {
+        let count = this.originalCount - this.countryCodes.length;
+        scoreCounter.innerHTML = count;
+    }
+
+    setTotal() {
+        countriesTotal.innerHTML = this.originalCount;
     }
 }
 
@@ -94,3 +108,5 @@ const countryFlag = document.getElementById('countryFlag');
 
 const guessBox = document.getElementById('guessBox');
 
+const scoreCounter = document.getElementById('score');
+const countriesTotal = document.getElementById('countriesTotal');

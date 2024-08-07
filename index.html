@@ -9,19 +9,30 @@
 </head>
 <body>
     <main class="container-fluid">
+        
         <div class="row">
-            <section class="col-4 p-5 d-flex">
-                <input id="guessBox" type="text" class="form-control textbox_shadow my-auto">
+            <!-- User Input Section -->
+            <section class="col-4 p-5 d-flex align-items-center flex-column justify-content-center">
+                <!-- input box -->
+                <input id="guessBox" type="text" class="form-control textbox_shadow">
+
+                <!-- score counter -->
+                <div class="my-3">
+                    <h3><span id="score" class="fw-bold">0</span> / <span id="countriesTotal" class="fw-bold">x</span></h3>
+                    </div>
             </section>
 
-            
+            <!-- Flag Display Section -->
             <section class="col-8 purple_background text-light p-5 d-flex justify-content-between">
+                <!-- Prev flag button -->
                 <button id="prevFlagButton" class="button_hidden">
                     <span class="carousel-control-prev-icon"></span>
                 </button>
 
+                <!-- FLAG IMAGE -->
                 <img id="countryFlag" src="" class="col-9 img-fluid my-auto" alt="">
 
+                <!-- Next flag button -->
                 <button id="nextFlagButton" class="button_hidden">
                     <span class="carousel-control-next-icon"></span>
                 </button>
