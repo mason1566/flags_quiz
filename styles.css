@@ -1,0 +1,11 @@
+:root {
+    --purple: #3d1f5c;
+}
+
+.purple_background {
+    background-color: var(--purple);
+}
+
+section {
+    min-height: 100vh;
+}
