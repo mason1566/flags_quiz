@@ -11,10 +11,22 @@
     <main class="container-fluid">
         <div class="row">
             <section class="col-4 p-5 d-flex">
-                <input type="text" class="form-control textbox_shadow my-auto">
+                <input id="guessBox" type="text" class="form-control textbox_shadow my-auto">
             </section>
-            <section class="col-8 purple_background text-light p-5 d-flex">
-                <img src="includes/flags/cd.svg" class="img-fluid col-9 mx-auto my-auto" alt="">
+
+            
+            <section class="col-8 purple_background text-light p-5 d-flex justify-content-between">
+                <button id="prevFlagButton" class="button_hidden">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+
+                <img id="countryFlag" src="" class="col-9 img-fluid my-auto" alt="">
+
+                <button id="nextFlagButton" class="button_hidden">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+
+
             </section>
         </div>
     </main>

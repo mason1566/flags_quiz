@@ -1,5 +1,6 @@
 :root {
     --purple: #3d1f5c;
+    box-sizing: border-box;
 }
 
 .purple_background {
@@ -12,4 +13,13 @@ section {
 
 .textbox_shadow {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flag_changer {
+    max-height: 50px;
+}
+
+.button_hidden {
+    border: none;
+    background-color: transparent;
 }
