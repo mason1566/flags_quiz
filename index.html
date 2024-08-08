@@ -5,43 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flags Quiz</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
 </head>
 <body>
-    <main class="container-fluid">
+    <main class="container columns is-fluid mx-0">
         
-        <div class="row">
-            <!-- User Input Section -->
-            <section class="col-4 p-5 d-flex align-items-center flex-column justify-content-center">
+        <!-- User Input Section -->
+        <section class="is-flex is-justify-content-center is-align-content-center">
+            <div class="is-justify-content-center is-align-content-center">
                 <!-- input box -->
-                <input id="guessBox" type="text" class="form-control textbox_shadow">
-
+                <input id="guessBox" type="text" class="textbox-shadow input">
                 <!-- score counter -->
-                <div class="my-3">
-                    <h3><span id="score" class="fw-bold">0</span> / <span id="countriesTotal" class="fw-bold">x</span></h3>
-                    </div>
-            </section>
-
-            <!-- Flag Display Section -->
-            <section class="col-8 purple_background text-light p-5 row">
-
-                <div class="col-12 d-flex justify-content-between my-0">
-                    <!-- Prev flag button -->
-                    <button id="prevFlagButton" class="button_hidden">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <!-- FLAG IMAGE -->
-                    <img id="countryFlag" src="" class="col-9 img-fluid my-auto" alt="">
-                    <!-- Next flag button -->
-                    <button id="nextFlagButton" class="button_hidden">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
+                <div class="column">
+                    <h3><span id="score" class="has-text-weight-bold">0</span> / <span id="countriesTotal" class="has-text-weight-bold">x</span></h3>
                 </div>
+            </div>
+        </section>
 
-            </section>
-        </div>
+        <!-- Flag Display Section -->
+        <section class="column is-8 purple-background is-flex is-justify-content-center is-align-content-center columns">
+
+                <!-- Prev flag button -->
+                <button id="prevFlagButton" class="button-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="M561-240 320-481l241-241 43 43-198 198 198 198-43 43Z"/></svg>
+                </button>
+                
+                <!-- FLAG IMAGE -->
+                <div id="flagContainer" class="my-auto is-9 column">
+                    <img id="countryFlag" src="" class="image" alt="">
+
+                </div>
+                
+                <!-- Next flag button -->
+                <button id="nextFlagButton" class="button-hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="48px" viewBox="0 -960 960 960" width="48px" fill="#5f6368"><path d="M530-481 332-679l43-43 241 241-241 241-43-43 198-198Z"/></svg>
+                </button>
+
+        </section>
     </main>
     <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
